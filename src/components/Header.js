@@ -1,12 +1,12 @@
-import React, { Component } form 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class Header extends Component{
     authButton(){
         return(
-            <button>Sign in</button>
+            <button className="btn btn-primary">Sign in</button>
         );
     }
-
     render(){
         return(
             <nav className="navbar navbar-light">
