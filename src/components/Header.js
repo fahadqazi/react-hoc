@@ -41,7 +41,7 @@ const mapStateToProps = (state) => {
     return {
         authenticated: state.authenticated
     }
-}
+};
 
 export default connect(mapStateToProps, actions)(Header);
 
