@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 export default function(ComposedComponent){
     class Authentication extends Component{
         render(){
+            console.log('Component: ', ComposedComponent);
+            console.log(this.props.authenticated);
             return <ComposedComponent {...this.props} />
         }
     }
-    return Authentication;
+
+    function mapStateToProps(state){
+        return {
+            authenticated: state.authenticated
+        }
+    }
+
+    return connect(mapStateToProps)(Authentication);
 }
